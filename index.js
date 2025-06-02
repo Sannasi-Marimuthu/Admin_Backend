@@ -2,7 +2,8 @@ const express = require("express");
 const cors = require("cors");
 const path = require("path");
 const nodemailer = require("nodemailer");
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
+// const mongoose = require("mongoose");  
 require("dotenv").config();
 
 const propertyRoutes1 = require("./Route/Routes");
@@ -255,13 +256,21 @@ app.post("/api/web", upload.any(), async (req, res) => {
 });
 ////////////////////////////////////////////////
 
-mongoose
-  .connect(process.env.DB_URI)
-  .then(() => console.log("Connected to MongoDB"))
-  .catch((err) => {
-    console.error("MongoDB connection error:", err);
-    process.exit(1);
-  });
+// mongoose
+//   .connect(process.env.DB_URI)
+//   .then(() => console.log("Connected to MongoDB"))
+//   .catch((err) => {
+//     console.error("MongoDB connection error:", err);
+//     process.exit(1);
+//   });
+
+
+mongoose.connect(process.env.DB_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+})
+.then(() => console.log('MongoDB connected'))
+.catch(err => console.error('MongoDB connection error:', err));
 
 app.use("/api", propertyRoutes);
 app.use("/api", propertyRoutes1);
