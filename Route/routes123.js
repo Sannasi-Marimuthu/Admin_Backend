@@ -364,7 +364,7 @@ router.patch("/update1", upload.any(), async (req, res) => {
       Propertyname,
       Propertydescription,
       Yearofconstruction,
-      // Displayname,
+      Displayname,
       Propertytype,
       Noofrooms,
       Checkin,

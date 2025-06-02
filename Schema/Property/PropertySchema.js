@@ -5,8 +5,7 @@ const Schema = new mongoose.Schema(
     Propertyname: { type: String, required: true }, //
     Propertydescription: { type: String, required: false },
     Yearofconstruction: { type: Number, required: false }, //
-    // Displayname: { type: String, required: true },
-    Displayname: { type: String },
+    Displayname: { type: String, required: true },
     Propertytype: { type: String, required: true }, //
     Noofrooms: { type: Number, required: true },
     Noofrestaurants: { type: Number, required: false },

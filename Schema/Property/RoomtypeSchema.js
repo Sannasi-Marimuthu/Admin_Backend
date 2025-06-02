@@ -2,8 +2,7 @@ const mongoose = require("mongoose");
 
 const Schema = new mongoose.Schema(
   {
-    // Displayname: { type: String, required: true },
-    Displayname: { type: String },
+    Displayname: { type: String, required: true },
     Description: { type: String, required: false },
     Totalrooms: { type: Number, required: true },
     Roomview: { type: String, required: false },
