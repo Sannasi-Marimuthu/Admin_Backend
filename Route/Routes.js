@@ -190,9 +190,9 @@ router.post("/approval", upload.any(), async (req, res) => {
     if (!propertyData.Propertyname) {
       return res.status(400).json({ message: "Propertyname is required" });
     }
-    if (!propertyData.Displayname) {
-      return res.status(400).json({ message: "Displayname is required" });
-    }
+    // if (!propertyData.Displayname) {
+    //   return res.status(400).json({ message: "Displayname is required" });
+    // }
     if (!propertyData.Propertytype) {
       return res.status(400).json({ message: "Propertytype is required" });
     }
@@ -300,9 +300,9 @@ router.post("/approval", upload.any(), async (req, res) => {
     const roomsData = parseJSON(req.body.roomsData, [], "roomsData");
     console.log("<<<<<<ROOM>>>>>>>>>", roomsData);
 
-    if (!roomsData.Displayname) {
-      return res.status(400).json({ message: "Displayname is required" });
-    }
+    // if (!roomsData.Displayname) {
+    //   return res.status(400).json({ message: "Displayname is required" });
+    // }
     if (!roomsData.Description) {
       return res.status(400).json({ message: "Room Description is required" });
     }
