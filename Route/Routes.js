@@ -221,9 +221,9 @@ router.post("/approval", upload.any(), async (req, res) => {
         .status(400)
         .json({ message: "Property description is required" });
     }
-    if (!propertyData.Propertyaddress) {
-      return res.status(400).json({ message: "Propertyaddress is required" });
-    }
+    // if (!propertyData.Propertyaddress) {
+    //   return res.status(400).json({ message: "Propertyaddress is required" });
+    // }
     if (!propertyData.Area) {
       return res.status(400).json({ message: "Area is required" });
     }
